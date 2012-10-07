@@ -24,7 +24,7 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     install_requires=install_requires,
-    test_suite='tests',
+    test_suite='panci.tests',
     entry_points = """\
       [console_scripts]
       travis2tox = panci.travis2tox:main

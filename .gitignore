@@ -1,5 +1,8 @@
 *.py[co]
 
+# Jython
+*.class
+
 # Packages
 *.egg
 *.egg-info

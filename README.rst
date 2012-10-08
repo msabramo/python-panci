@@ -5,7 +5,7 @@ panci
    :target: http://travis-ci.org/msabramo/python-panci
 
 For a Python project, take a ``.travis.yml`` file (`Travis CI`_) and output a
-``tox.ini`` file (`Tox`_).
+``tox.ini`` file (`Tox`_). Or vice-versa.
 
 Example
 -------

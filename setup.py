@@ -27,8 +27,7 @@ setup(
     test_suite='panci.tests',
     entry_points = """\
       [console_scripts]
-      travis2tox = panci.travis2tox:main
-      tox2travis = panci.tox2travis:main
+      panci = panci.cli:main
     """,
     license='MIT',
     classifiers=[

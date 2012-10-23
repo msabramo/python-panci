@@ -77,7 +77,7 @@ Then we get::
 Miscellaneous related stuff
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* https://github.com/Jc2k/buildbot_travis -- allows Buildbot to consume a ``.travis.yml`` file.
+* `buildbot_travis`_ -- allows `Buildbot`_ to consume a ``.travis.yml`` file.
 
 
 Support
@@ -88,3 +88,5 @@ For questions, comments, and suggestions, please use `GitHub Issues`_.
 .. _Travis CI: http://travis-ci.org/
 .. _Tox: http://tox.testrun.org/
 .. _GitHub Issues: https://github.com/msabramo/python-panci/issues
+.. _buildbot_travis: https://github.com/Jc2k/buildbot_travis
+.. _Buildbot: http://buildbot.net/

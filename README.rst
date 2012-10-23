@@ -74,6 +74,15 @@ Then we get::
 	- pypy
 	script: '{envpython} setup.py test'
 
+Miscellaneous related stuff
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* https://github.com/Jc2k/buildbot_travis -- allows Buildbot to consume a ``.travis.yml`` file.
+
+
+Support
+~~~~~~~
+
 For questions, comments, and suggestions, please use `GitHub Issues`_.
 
 .. _Travis CI: http://travis-ci.org/

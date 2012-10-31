@@ -28,6 +28,7 @@ setup(
     entry_points = """\
       [console_scripts]
       panci = panci.cli:main
+      panci-tox-quickstart = panci.toxquickstart:main
     """,
     license='MIT',
     classifiers=[

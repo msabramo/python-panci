@@ -23,7 +23,7 @@ def main():
         help='output format')
     parser.add_argument(
         'input_file',
-        help='path to a .travis.yml file')
+        help='path to a .travis.yml or tox.ini file')
     args = parser.parse_args()
 
     if args.to == 'tox' or args.input_file.endswith('.yml'):

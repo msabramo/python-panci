@@ -138,6 +138,8 @@ And then a ``tox.ini`` file is spit out with::
         requests
         nose
 
+Note about panci-tox-quickstart: I am also working longer-term on getting a tox-quickstart command merged into tox. See `this pull request <https://bitbucket.org/hpk42/tox/pull-request/20/add-a-tox-quickstart-command/diff>`_.
+
 
 Miscellaneous related stuff
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

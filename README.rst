@@ -7,6 +7,12 @@ panci
 For a Python project, take a ``.travis.yml`` file (`Travis CI`_) and output a
 ``tox.ini`` file (`Tox`_). Or vice-versa.
 
+Why the name?
+-------------
+
+The name "panci" is an homage to `John MacFarlane`_'s excellent `pandoc`_.
+I've replaced the "doc" with "ci"; "CI" stands for Continuous Integration, a broad term for what `Travis CI`_ and `Tox`_ help you with.
+
 Example
 -------
 
@@ -144,6 +150,8 @@ Support
 
 For questions, comments, and suggestions, please use `GitHub Issues`_.
 
+.. _John MacFarlane: http://johnmacfarlane.net/
+.. _pandoc: http://johnmacfarlane.net/pandoc/
 .. _Travis CI: http://travis-ci.org/
 .. _Tox: http://tox.testrun.org/
 .. _GitHub Issues: https://github.com/msabramo/python-panci/issues

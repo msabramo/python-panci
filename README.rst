@@ -19,7 +19,9 @@ Example
 Travis to Tox
 ~~~~~~~~~~~~~
 
-Let's say that we have the following ``.travis.yml``::
+Let's say that we have the following ``.travis.yml``:
+
+.. code-block:: yaml
 
     language: python
 
@@ -35,7 +37,9 @@ If we run::
 
     panci --to=tox .travis.yml
 
-Then we get::
+Then we get:
+
+.. code-block:: ini
 
     # Tox (http://tox.testrun.org/) is a tool for running tests
     # in multiple virtualenvs. This configuration file will run the
@@ -51,7 +55,9 @@ Then we get::
 Tox to Travis
 ~~~~~~~~~~~~~
 
-Let's say that we have the following ``tox.ini``::
+Let's say that we have the following ``tox.ini``:
+
+.. code-block:: ini
 
 	# Tox (http://tox.testrun.org/) is a tool for running tests
 	# in multiple virtualenvs. This configuration file will run the
@@ -68,7 +74,9 @@ If we run::
 
 	panci --to=travis tox.ini
 	
-Then we get::
+Then we get:
+
+.. code-block:: yaml
 
 	language: python
 	python:
@@ -122,7 +130,9 @@ Then you are asked some questions::
     
     Execute `tox` to test your project.
 
-And then a ``tox.ini`` file is spit out with::
+And then a ``tox.ini`` file is spit out with:
+
+.. code-block:: ini
 
     # Tox (http://tox.testrun.org/) is a tool for running tests
     # in multiple virtualenvs. This configuration file will run the

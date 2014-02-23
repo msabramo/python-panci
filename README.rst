@@ -13,6 +13,11 @@ Why the name?
 The name "panci" is an homage to `John MacFarlane`_'s excellent `pandoc`_.
 I've replaced the "doc" with "ci"; "CI" stands for Continuous Integration, a broad term for what `Travis CI`_ and `Tox`_ help you with.
 
+Installing
+----------
+
+    sudo pip install panci
+
 Example
 -------
 

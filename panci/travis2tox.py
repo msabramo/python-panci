@@ -16,22 +16,6 @@ def travis_env_to_tox_env(travis_env):
         return travis_env
 
 
-def tox_envlist_to_travis_envlist(tox_envlist):
-    """Converts Tox-style environments (e.g.: "py26") to a Travis-style
-    environments (e.g.: "2.6")."""
-
-    travis_envlist = []
-
-    for env in tox_envlist:
-        if env.startswith('py'):
-            if env == 'pypy':
-                travis_envlist.append(env)
-            else:
-                travis_envlist.append(env[2] + '.' + env[3])
-
-    return travis_envlist
-
-
 def travis2tox(in_file):
     """Takes a path or file object for a ``.travis.yml`` file and returns a
     ``ToxConfig`` object."""
@@ -41,13 +25,3 @@ def travis2tox(in_file):
     commands = config.get_all_commands()
 
     return ToxConfig(envlist, commands)
-
-
-def tox2travis(in_file):
-    config = ToxConfig.from_file(in_file)
-    travis_config = TravisConfig()
-    travis_config.language = 'python'
-    travis_config.python = tox_envlist_to_travis_envlist(config.envlist)
-    travis_config.script = config.commands
-
-    return travis_config.dumps()

@@ -98,40 +98,40 @@ panci-tox-quickstart
 
 If we run::
 
-    panci-tox-quickstart 
+    panci-tox-quickstart
 
 Then you are asked some questions::
 
     This utility will ask you a few questions and then generate a simple tox.ini
     file to help get you started using tox.
-    
+
     Please enter values for the following settings (just press Enter to
     accept a default value, if one is given in brackets).
-    
+
     > Test your project with py24 (Y/n) [Y]: n
     > Test your project with py25 (Y/n) [Y]: n
-    > Test your project with py26 (Y/n) [Y]: 
-    > Test your project with py27 (Y/n) [Y]: 
-    > Test your project with py30 (Y/n) [Y]: 
-    > Test your project with py31 (Y/n) [Y]: 
-    > Test your project with py32 (Y/n) [Y]: 
-    > Test your project with py33 (Y/n) [Y]: 
-    > Test your project with pypy (Y/n) [Y]: 
+    > Test your project with py26 (Y/n) [Y]:
+    > Test your project with py27 (Y/n) [Y]:
+    > Test your project with py30 (Y/n) [Y]:
+    > Test your project with py31 (Y/n) [Y]:
+    > Test your project with py32 (Y/n) [Y]:
+    > Test your project with py33 (Y/n) [Y]:
+    > Test your project with pypy (Y/n) [Y]:
     > Test your project with jython (Y/n) [Y]: n
-    
+
     What command should be used to test your project -- examples:
         - python setup.py test
         - nosetests package.module
         - trial package.module
-    > Command to run to test project [{envpython} setup.py test]: 
-    
+    > Command to run to test project [{envpython} setup.py test]:
+
     What dependencies does your project have?
     > Comma-separated list of dependencies [ ]: requests,nose
-    
+
     Creating file tox.ini.
-    
+
     Finished: A tox.ini file has been created.
-    
+
     Execute `tox` to test your project.
 
 And then a ``tox.ini`` file is spit out with:
@@ -142,13 +142,13 @@ And then a ``tox.ini`` file is spit out with:
     # in multiple virtualenvs. This configuration file will run the
     # test suite on all supported python versions. To use it, "pip install tox"
     # and then run "tox" from this directory.
-    
+
     [tox]
     envlist = py26, py27, py30, py31, py32, py33, pypy
-    
+
     [testenv]
     commands = {envpython} setup.py test
-    deps = 
+    deps =
         requests
         nose
 

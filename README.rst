@@ -16,6 +16,8 @@ I've replaced the "doc" with "ci"; "CI" stands for Continuous Integration, a bro
 Installing
 ----------
 
+With pip::
+
     sudo pip install panci
 
 Example

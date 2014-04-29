@@ -66,34 +66,31 @@ Let's say that we have the following ``tox.ini``:
 
 .. code-block:: ini
 
-	# Tox (http://tox.testrun.org/) is a tool for running tests
-	# in multiple virtualenvs. This configuration file will run the
-	# test suite on all supported python versions. To use it, "pip install tox"
-	# and then run "tox" from this directory.
+   [tox]
+   envlist = py26, py27, py33, pypy
 
-	[tox]
-	envlist = py25, py26, py27, py32, py33, pypy, jython
-
-	[testenv]
-	commands = {envpython} setup.py test
+   [testenv]
+   commands = py.test
+   deps = pytest
 
 If we run::
 
-	panci --to=travis tox.ini
-	
+	panci tox.ini
+
 Then we get:
 
 .. code-block:: yaml
 
-	language: python
-	python:
-	- '2.5'
-	- '2.6'
-	- '2.7'
-	- '3.2'
-	- '3.3'
-	- pypy
-	script: '{envpython} setup.py test'
+   language: python
+   env:
+     - TOXENV=py26
+     - TOXENV=py27
+     - TOXENV=py33
+     - TOXENV=pypy
+   install:
+     - travis_retry pip install tox==1.6.1
+   script:
+     - travis_retry tox
 
 
 panci-tox-quickstart

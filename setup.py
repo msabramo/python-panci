@@ -20,7 +20,7 @@ setup(
     keywords='tox, travis, continuous integration, CI',
     author='Marc Abramowitz',
     author_email='marc@marc-abramowitz.com',
-    url='https://github.com/msabramo/panci',
+    url='https://github.com/msabramo/python-panci',
     packages=find_packages(),
     zip_safe=False,
     install_requires=install_requires,

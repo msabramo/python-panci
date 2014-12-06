@@ -1,5 +1,5 @@
 pytest
 pytest-cov
 PyYAML
-coverage
+coverage<=3.999.999
 coveralls

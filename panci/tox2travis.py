@@ -17,7 +17,7 @@ def tox2travis(in_file):
         env:
           {env_list}
         install:
-          - travis_retry pip install tox==1.6.1
+          - travis_retry pip install tox
         script:
           - travis_retry tox
         """.format(env_list=env_list)).strip()

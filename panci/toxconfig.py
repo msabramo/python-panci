@@ -1,5 +1,7 @@
 """Provides a ``ToxConfig`` class for operating on ``tox.ini`` files"""
 
+import subprocess
+
 try:
     # Python 2
     from ConfigParser import ConfigParser
@@ -14,7 +16,7 @@ class ToxConfig(object):
     """Class for operating on ``tox.ini`` files"""
 
     @classmethod
-    def from_file(self, in_file):
+    def from_file(cls, in_file):
         if not hasattr(in_file, 'read'):
             in_file = open(in_file, 'r')
 
@@ -28,10 +30,14 @@ class ToxConfig(object):
             config_parser.readfp(in_file)
 
         return ToxConfig(
-            envlist=list(map(str.strip, config_parser.get('tox', 'envlist').split(','))),
+            envlist=cls._get_envlist_from_tox(in_file.name),
             commands=config_parser.get('testenv', 'commands')
         )
 
+    @classmethod
+    def _get_envlist_from_tox(cls, in_file):
+        tox_l_output = subprocess.check_output(['tox', '-c', in_file, '-l'])
+        return tox_l_output.splitlines()
 
     def __init__(self, envlist, commands):
         """Create an object from a list of environments and a list of

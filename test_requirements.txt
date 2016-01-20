@@ -1,3 +1,4 @@
+six
 pytest
 pytest-cov
 PyYAML

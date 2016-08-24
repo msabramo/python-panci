@@ -2,7 +2,6 @@
 
 import textwrap
 
-from .travisconfig import TravisConfig
 from .toxconfig import ToxConfig
 
 

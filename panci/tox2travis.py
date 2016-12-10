@@ -2,7 +2,6 @@
 
 import textwrap
 
-from .travisconfig import TravisConfig
 from .toxconfig import ToxConfig
 
 
@@ -14,6 +13,7 @@ def tox2travis(in_file):
 
     return textwrap.dedent("""
         language: python
+        cache: pip
         env:
           {env_list}
         install:

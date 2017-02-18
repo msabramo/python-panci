@@ -14,7 +14,7 @@ long_description = "\n" + open(os.path.join(this_dir, 'README.rst')).read()
 
 setup(
     name='panci',
-    version='0.0.0',
+    version='0.0.1',
     description=('Convert between Travis-CI `.travis.yml` files and Tox `tox.ini` files'),
     long_description=long_description,
     keywords='tox, travis, continuous integration, CI',

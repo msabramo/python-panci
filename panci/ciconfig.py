@@ -29,7 +29,7 @@ class AbstractPythonEnv(object):
 
 class TravisPythonEnv(AbstractPythonEnv):
 
-    regex = '(?P<major_version>\d)\.(?P<minor_version>\d)'
+    regex = r'(?P<major_version>\d)\.(?P<minor_version>\d)'
 
     def __init__(self, s):
         match = re.match(self.regex, s)
@@ -50,7 +50,7 @@ class TravisPythonEnv(AbstractPythonEnv):
 
 class ToxPythonEnv(AbstractPythonEnv):
 
-    regex = 'py(?P<major_version>\d)(?P<minor_version>\d)'
+    regex = r'py(?P<major_version>\d)(?P<minor_version>\d)'
 
     def __init__(self, s):
         match = re.match(self.regex, s)
@@ -68,7 +68,7 @@ class ToxPythonEnv(AbstractPythonEnv):
         if self.executable in ('pypy', 'jython'):
             return self.executable
         else:
-            regex = 'python(?P<major_version>\d)\.(?P<minor_version>\d)'
+            regex = r'python(?P<major_version>\d)\.(?P<minor_version>\d)'
             match = re.match(regex, self.executable)
 
             if match:

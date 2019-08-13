@@ -13,6 +13,7 @@ def tox2travis(in_file):
 
     return textwrap.dedent("""
         language: python
+        python: 3.6
         cache: pip
         env:
           {env_list}

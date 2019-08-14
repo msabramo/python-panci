@@ -18,7 +18,7 @@ Installing
 
 With pip::
 
-    sudo pip install panci
+    pip install panci
 
 Example
 -------

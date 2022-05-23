@@ -23,7 +23,7 @@ class TravisConfig(object):
             if not hasattr(in_file, 'read'):
                 in_file = open(in_file, 'r')
 
-            self.__dict__ = yaml.load(in_file)
+            self.__dict__ = yaml.safe_load(in_file)
 
     def get_all_commands(self):
         """Return a list of all the commands in all of the fields that can
